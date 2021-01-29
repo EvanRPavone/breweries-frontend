@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Breweries</title>
+    <link
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div class="container mx-auto my-4">
+        <section id="theBreweryContainer" class="px-4 bg-yellow-400 sm:min-h-screen rounded-md shadow">
+            <div class="header">
+                <h1 class="text-4x1 semibold border-b-4 text-green-900 text-center border-black-300">Welcome to your Favorite Breweries App!</h1>
+                <br/>
+            </div>
+            <div id="brewery-container">
+                <h3 class="text-center text-gray-100">Hello brewery goer! Use this application to keep track of all the breweries you have been too!</h3>
+                <h6 class="text-center text-gray-100">Create a Brewery by the name and then add your favorite beers from that brewery!</h6>
+                <form id="create-brewery-form">
+                    <fieldset>
+                        <legend class="text-2xl pt-4 text-green-700" for="brewery">Add a new Brewery Below!</legend><br>
+                        <input type="text" name="brewery-name" class="block float-left w-10/12 p-3 rounded" id="brewery-name" placeholder="Enter name of Brewery">
+                        <input type="text" name="brewery-city" class="block float-left w-10/12 p-3 rounded" id="brewery-city" placeholder="Enter City">
+                        <input type="text" name="brewery-state" class="block float-left w-10/12 p-3 rounded" id="brewery-state" placeholder="Enter State">
+                        <button type="submit" class="block float-right w-2/12"><i class="fa fa-plus p-4 z--1 bg-black-200"></i></button>
+                    </fieldset>
+                </form><br>
+                <button id="sort" type="click" class="block float-right w-2/12">Sort</button>
+                <ul id="brewery-ul">
+                    <h4 class="text-2xl italic text-center">All Breweries</h4>
+                </ul><br>
+            </div>
+        </section>
+    </div>
+    <script src="src/components/brewery.js"></script>
+    <script src="src/components/favorite.js"></script>
+    <script src="src/components/index.js"></script>
+</body>
+</html>
